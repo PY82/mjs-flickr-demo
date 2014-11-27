@@ -1,0 +1,11 @@
+body{
+    padding-top: 50px;
+}
+
+.Main {
+    background: #f1f1f1;
+    font-family: "Microsoft YaHei",simsun,Arial;
+    font-size: 12px;
+    color: #999;
+    display: block;
+}

@@ -1,0 +1,50 @@
+/* 
+ * This file is reserved for your global style rules. 
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-family: Avenir, sans-serif;
+    color: #ffffff;
+    background: hsl(1000, 100%, 100%);
+    font-size: 16px; /* Spacing of components */
+}
+
+body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Sizing of components */
+}
+
+/* Loader -------------------------------------------- */
+
+.Loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.Loader-logo {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background: url(https://s.yimg.com/uy/build/images/progress/balls-48x24-trans.gif) no-repeat center center;
+    background-size: 24px 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+.Footer{
+    padding: 0.5rem;
+}

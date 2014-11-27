@@ -1,0 +1,6 @@
+.items-item{
+    display: inline-block;
+    margin: 6px;
+    max-width: 500px;
+    overflow: hidden;
+}

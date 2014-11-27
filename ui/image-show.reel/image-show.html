@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="image-show.css">
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "photo-show"}
+                }
+            },
+            "img": {
+                "prototype": "digit/ui/image.reel",
+                "properties": {
+                    "element": {"#": "img"}
+                },
+                "bindings":{
+                    "src":{"<-": "@owner.photo.url_z"}
+                }
+            },
+            "author": {
+                "prototype": "digit/ui/text.reel",
+                "properties": {
+                    "element": {"#": "author"}
+                },
+                "bindings":{
+                    "value":{"<-": "'Uploaded by ' + @owner.photo.ownername"}
+                }
+            },
+            "date-upload": {
+                "prototype": "ui/time-view.reel",
+                "properties": {
+                    "element": {"#": "date-upload"}
+                },
+                "bindings":{
+                    "datetime":{"<-": "@owner.photo.dateupload"}
+                }
+            },
+            "desc": {
+                "prototype": "digit/ui/text.reel",
+                "properties": {
+                    "element": {"#": "desc"}
+                },
+                "bindings":{
+                    "value":{"<-": "@owner.photo.description._content"}
+                }
+            },
+            "closeBtn":{
+                "prototype": "ui/a-button.reel",
+                "properties": {
+                    "element": {"#": "closeBtn"},
+                    "src":"../../assets/icons/icon.png"
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div data-montage-id="photo-show" class="PhotoShow">
+    <div class="PhotoShow-contentContainer">
+        <div class="PhotoShow-contentContainer-photoWrapper">
+            <div data-montage-id="img" class="PhotoShow-contentContainer-photoWrapper-photo">
+            </div>
+        </div>
+        <div class="PhotoShow-contentContainer-content">
+            <div class="PhotoShow-contentContainer-content-contentWrapper">
+                <div data-montage-id="author"></div>
+                <div data-montage-id="date-upload"></div>
+                <text data-montage-id="desc" class="PhotoShow-contentContainer-content-contentWrapper-desc"></text>
+            </div>
+        </div>
+        <a data-montage-id="closeBtn" class="PhotoShow-picClose">Close</a>
+    </div>
+
+</div>
+
+</body>
+</html>

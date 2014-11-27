@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="image-list.css">
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "image-list"}
+                }
+            },
+            "items":{
+                "prototype": "montage/ui/repetition.reel",
+                "properties": {
+                    "element": { "#": "items" },
+                    "isSelectionEnabled": true,
+                    "contentController":{"@": "imageListController"}
+                }
+            },
+            "imageListController":{
+                "prototype": "montage/core/range-controller",
+                "properties": {
+                    "selection": []
+                },
+                "bindings": {
+                    "content": {"<-": "@owner.contentController.images"}
+                }
+            },
+            "item":{
+                "prototype": "ui/image-view.reel",
+                "properties": {
+                    "element": { "#": "item" }
+                },
+                "bindings":{
+                    "photo":{"<-":"@items:iteration.object"}
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div data-montage-id="image-list">
+    <div data-montage-id="items">
+        <div data-montage-id="item" class="items-item"></div>
+    </div>
+</div>
+</body>
+</html>

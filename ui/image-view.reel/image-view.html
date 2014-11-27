@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="image-view.css">
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "image-view"}
+                }
+            },
+            "image": {
+                "prototype": "digit/ui/image.reel",
+                "properties": {
+                    "element": {"#": "image"}
+                },
+                "bindings":{
+                    "src":{"<-": "@owner.photo.url_n"}
+                }
+            },
+            "title": {
+                "prototype": "digit/ui/text.reel",
+                "properties": {
+                    "element": {"#": "title"}
+                },
+                "bindings":{
+                    "value":{"<-": "@owner.photo.title.length>30 ? @owner.photo.title.length.substring(0,30)+'...' : @owner.photo.title"}
+                }
+            },
+            "author": {
+                "prototype": "digit/ui/text.reel",
+                "properties": {
+                    "element": {"#": "author"}
+                },
+                "bindings":{
+                    "value":{"<-": "@owner.photo.ownername.length>30 ?@owner.photo.ownername.substring(0,30)+'...' : @owner.photo.ownername"}
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div data-montage-id="image-view" class="ImageView">
+    <div data-montage-id="image" class="ImageView-image"></div>
+    <div class="ImageView-content">
+        <div data-montage-id="title" class="ImageView-content-title"></div>
+        <div class="ImageView-content-authorWrapper">
+            <span class="ImageView-content-authorWrapper-from">From</span>
+            <span data-montage-id="author" class="ImageView-content-authorWrapper-author"></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

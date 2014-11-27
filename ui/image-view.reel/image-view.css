@@ -1,0 +1,59 @@
+@-webkit-keyframes open {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes open {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+.ImageView{
+    height: 280px;
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    box-shadow:0px 2px 12px -6px #ccc;
+    -webkit-animation: open 0.2s;
+    animation: open 0.2s;
+}
+
+.ImageView-image{
+    overflow: hidden;
+    display: block;
+    max-height: 70%;
+}
+
+.ImageView-content{
+    font-family: "Microsoft YaHei",simsun,Arial;
+    font-size: 12px;
+    color: #999;
+    display: block;
+    float: none;
+    margin: 10px 0 0 10px;
+    height: 34px;
+    width: 100%;
+}
+
+.ImageView-content-title{
+    width: 100%;
+    height: 17px;
+    left: 0px;
+}
+
+.ImageView-content-authorWrapper{
+    display: inline;
+    width: 100%;
+    float: left;
+    margin: 0 0 0 0;
+}
+
+.ImageView-content-authorWrapper-from{
+    width: 20%;
+}
+
+.ImageView-content-authorWrapper-author{
+    width: 80%;
+    height:17px;
+    margin: 0px;
+}
