@@ -36,12 +36,13 @@
     height: 85%;
     background: #000000;
     display: flex;
-    -webkit-display:flex;
+    display:-webkit-flex;
 }
 
 .PhotoShow-contentContainer-photoWrapper{
     height: 100%;
     flex: 3;
+    -webkit-flex:3;
     top: 0px;
     left:0px;
     margin: 0px;
@@ -51,7 +52,7 @@
     padding: 15px;
     border: #222 1px solid;
     display: flex;
-    -webkit-display:flex;
+    display:-webkit-flex;
 }
 
 .PhotoShow-contentContainer-photoWrapper-photo{
@@ -63,6 +64,7 @@
 .PhotoShow-contentContainer-content{
     height: 100%;
     flex:1;
+    -webkit-flex:1;
     margin-left: 10px;
 }
 
@@ -84,7 +86,7 @@
     margin-left: 5px;
     margin-top: -20px;
     display: block;
-    background: url(/assets/icons/icon.png) no-repeat;
+    background: url(../../assets/icons/icon.png) no-repeat;
     text-indent: -10000px;
     width: 21px;
     height: 22px;

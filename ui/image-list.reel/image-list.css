@@ -1,5 +1,9 @@
+.image-list-items{
+
+}
+
 .items-item{
-    display: inline-block;
+    float: left;
     margin: 6px;
     max-width: 500px;
     overflow: hidden;

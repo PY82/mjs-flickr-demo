@@ -47,7 +47,6 @@ exports.ImageList = Component.specialize( /** @lends List# */ {
 
     handleSelection: {
         value: function( selected ) {
-            debugger
             if(!selected) return;
             if(!this.contentController) return;
             if(!this.contentController.images) return;
